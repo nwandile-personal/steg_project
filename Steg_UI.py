@@ -42,15 +42,15 @@ if option == 'Encode':
     
     # if uploaded_file is not None:
         st.image(uploaded_file, use_column_width=True, caption = 'This image will be encoded')
-        input_image = uploaded_file.name
+        state.input_image = uploaded_file.name
         output_image = "encoded_image.PNG"
         
-        secret_data = st.text_input("Write your secret message", "")
+        state.secret_data = st.text_input("Write your secret message", "")
         #secret_data = input("Enter data to be encoded : ")  
         
         if st.button('Confirm'):
             state.widget_key = str(randint(1000, 100000000))
-            encoded_image = encode(image_name=input_image, secret_data=secret_data)
+            encoded_image = encode(image_name=state.input_image, secret_data=state.secret_data)
             cv2.imwrite(output_image, encoded_image)
             st.write("Encoding.....")
             st.write("Encoding Complete")
