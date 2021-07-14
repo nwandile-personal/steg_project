@@ -121,7 +121,7 @@ import os
 from random import randint
 #import io
 
-os.chdir('C:/CG/TME/Solutions/My/Steganography')
+#os.chdir('C:/CG/TME/Solutions/My/Steganography')
 import streamlit as st
 import cv2
 #from PIL import Image
