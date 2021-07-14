@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from PIL import Image
 
 def to_bin(data):
     """Convert `data` to binary format as string"""
@@ -12,12 +13,15 @@ def to_bin(data):
     else:
         raise TypeError("Type not supported.")
         
-        
+
         
 def encode(image_name, secret_data):
     # read the image
-    image = cv2.imread(image_name)
+    
+    #image1 = Image.open(image_name)
+    image = image_name
     # maximum bytes to encode
+    #image = np.array(image1)
     n_bytes = image.shape[0] * image.shape[1] * 3 // 8
     print("[*] Maximum bytes to encode:", n_bytes)
     if len(secret_data) > n_bytes:
@@ -56,7 +60,7 @@ def encode(image_name, secret_data):
 def decode(image_name):
     print("[+] Decoding...")
     # read the image
-    image = cv2.imread(image_name)
+    image = image_name
     binary_data = ""
     for row in image:
         for pixel in row:
