@@ -9,7 +9,6 @@ Created on Tue Jul  6 16:57:25 2021
 import os
 from random import randint
 
-os.chdir('C:/CG/TME/Solutions/My/Steganography')
 import streamlit as st
 import cv2
 #from PIL import Image
