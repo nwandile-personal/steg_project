@@ -43,7 +43,7 @@ if option == 'Encode':
     #key1 = key
     #key = str(random.randint(10,1000))
     #key = '0001'
-    uploaded_file = st.file_uploader("Upload Files",type=['jpeg'], key = state.widget_key)
+    uploaded_file = st.file_uploader("Upload Files",type=['jpeg','jpg'], key = state.widget_key)
     if uploaded_file is not None:
         file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
         st.write(file_details)
