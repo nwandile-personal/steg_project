@@ -18,7 +18,7 @@ def to_bin(data):
 def encode(image_name, secret_data):
     # read the image
     
-    #image1 = Image.open(image_name)
+    #image = cv2.imread(image_name)
     image = image_name
     # maximum bytes to encode
     #image = np.array(image1)
@@ -60,7 +60,13 @@ def encode(image_name, secret_data):
 def decode(image_name):
     print("[+] Decoding...")
     # read the image
+    
+    #image = cv2.imread(image_name)
     image = image_name
+    # maximum bytes to encode
+    #image = np.array(image1)
+    
+    #image = image_name
     binary_data = ""
     for row in image:
         for pixel in row:
