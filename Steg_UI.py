@@ -84,7 +84,7 @@ if option == 'Decode':
     #key1 = key
     #key = str(random.randint(10,1000))
     #key = '0001'
-    uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'], key = state.widget_key)
+    uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg','jpg'], key = state.widget_key)
     # key = '0002'
     # uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'], key = key)
     
