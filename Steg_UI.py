@@ -11,7 +11,7 @@ from random import randint
 from io import BytesIO
 import base64
 
-os.chdir('C:/CG/TME/Solutions/My/Steganography')
+#os.chdir('C:/CG/TME/Solutions/My/Steganography')
 import streamlit as st
 import cv2
 from PIL import Image
